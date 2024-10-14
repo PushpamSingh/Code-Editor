@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <script src="editer.js" defer></script>
+</head>
+<body class="font-['Nunito',san-serif] w-full h-screen bg-[#0C1114]">
+    <!-- Editor Section -->
+    <div id="editor" class="w-full h-[70%] flex flex-wrap gap-6 p-6 items-center justify-between overflow-auto bg-[#0C1114]">
+        <!-- HTML Editor -->
+        <div class="html-editor w-full sm:w-[30%] h-[400px] bg-[#0C1114] rounded-md shadow-3xl border-2 border-[#ffffff21] overflow-hidden">
+            <div class="header flex items-center justify-between p-4 shadow-md">
+                <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-code text-[#eb4600]"></i>
+                    <h1 class="text-[#eb4600] font-bold">HTML</h1>
+                </div>
+                <i class="fa-regular fa-copy text-[#eb4600] hover:scale-125 cursor-pointer copy copy1"></i>
+            </div>
+            <textarea class="html-textarea selection:bg-[#eb4600] w-full h-[calc(100%-55px)] bg-[#0C1114] outline-none text-white p-4 resize-none"></textarea>
+        </div> 
+
+        <!-- CSS Editor -->
+        <div class="css-editor w-full sm:w-[30%] h-[400px] bg-[#0C1114] rounded-md shadow-3xl border-2 border-[#ffffff21] overflow-hidden">
+            <div class="header flex items-center justify-between p-4 shadow-md">
+                <div class="flex gap-3 items-center">
+                    <i class="fa-regular fa-hashtag text-[#242bff]"></i>
+                    <h1 class="text-[#242bff] font-bold">CSS</h1>
+                </div>
+                <i class="fa-regular fa-copy text-[#242bff] cursor-pointer copy copy2 hover:scale-125"></i>
+            </div>
+            <textarea class="css-textarea selection:bg-[#242bff] w-full h-[calc(100%-55px)] bg-[#0C1114] outline-none text-white p-4 resize-none"></textarea>
+        </div>
+
+        <!-- JavaScript Editor -->
+        <div class="js-editor w-full sm:w-[30%] h-[400px] bg-[#0C1114] rounded-md shadow-3xl border-2 border-[#ffffff21] overflow-hidden">
+            <div class="header flex items-center justify-between p-4 shadow-md">
+                <div class="flex gap-3 items-center">
+                    <i class="fa-brands fa-square-js text-[#ebe300]"></i>
+                    <h1 class="text-[#ebe300] font-bold">JS</h1>
+                </div>
+                <i class="fa-regular fa-copy text-[#ebe300] cursor-pointer copy copy3 hover:scale-125"></i>
+            </div>
+            <textarea class="js-textarea selection:bg-[#ebe300] selection:text-black w-full h-[calc(100%-55px)] bg-[#0C1114] outline-none text-white p-4 resize-none"></textarea>
+        </div>
+    </div>
+
+    <!-- Output Section -->
+    <div id="outputpage" class="output-container w-full h-[100%] flex flex-col">
+        <div class="output-head flex justify-between items-center px-4 py-2 border-b border-gray-700 bg-[#1a1a1a]">
+            <h1 class="text-lg font-semibold text-white">OUTPUT</h1>
+            <div class="flex items-center gap-4">
+                <i class="save fa-regular fa-floppy-disk cursor-pointer text-white"></i>
+                <a href="#outputpage"><i class="up-arrow fa-solid fa-circle-chevron-up cursor-pointer text-white"></i></a>
+                <a href="#editor"><i class="down-arrow fa-solid fa-circle-chevron-up fa-rotate-180 hidden" style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+        <div class="output w-full h-full bg-white text-black">
+            <iframe src="" frameborder="0" class="w-full h-full"></iframe>
+        </div>
+    </div>
+</body>
+</html>
